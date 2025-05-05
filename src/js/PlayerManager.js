@@ -50,10 +50,10 @@ export default class PlayerManager {
             <td>${t.getTypeName()}</td>
             <td>
                 <button data-type-id="${t.getTypeName()}" class="action-btn edit-button">
-                <img src="../img/edit.svg" width="25px">
+                <img src="img/edit.svg" width="25px">
                 </button>
                 <button data-type-id="${t.getTypeName()}" class="action-btn delete-button">
-                <img src="../img/delete.svg" width="25px">
+                <img src="img/delete.svg" width="25px">
                 </button>
             </td>`
         });
@@ -102,10 +102,10 @@ export default class PlayerManager {
                     </td>
                     <td>
                         <button data-player-id="${p.getName()}" class="action-btn edit-button">
-                            <img src="../img/edit.svg" width="25px">
+                            <img src="img/edit.svg" width="25px">
                         </button>
                         <button data-player-id="${p.getName()}" class="action-btn delete-button">
-                            <img src="../img/delete.svg" width="25px">
+                            <img src="img/delete.svg" width="25px">
                         </button>
                     </td>
                 </tr>
