@@ -1,5 +1,5 @@
 {
-    "/public/app.js": "/public/app.js",
-    "/public/style.css": "/public/style.css",
-    "/public/index.html": "/public/index.html"
+    "/docs/app.js": "/docs/app.js",
+    "/docs/style.css": "/docs/style.css",
+    "/docs/index.html": "/docs/index.html"
 }
