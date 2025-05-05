@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Inter", sans-serif;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: antiquewhite;
+    border: 1px solid black;
+    height: 100px;
+}
+
+.menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid black;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #FFC857;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    font-size: 1.5rem;
+}
+#content h2 {
+    margin-bottom: 30px;
+}
+#content p {
+    margin: 5px;
+}
+.photo-container {
+    display: flex;
+    justify-content: center;
+    width: 81%;
+    margin-top: 10px;
+}
+.addForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.addForm input {
+    font-size: 1.5rem;
+}
+.addForm select {
+    font-size: 1.5rem;
+}
+.btn {
+    margin-top: 10px;
+    width: 165px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #FFC857;
+    cursor: pointer;
+}
+table {
+    width: 80%;
+    margin: 20px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th {
+    background-color: chocolate;
+    color: white;
+}
+td,
+th {
+    border: 1px solid black;
+    text-align: center;
+}
+td {
+    text-align: center;
+}
+
+.action-btn {
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.2s ease-in-out;
+}
+.action-btn:hover {
+    scale: 1.20;
+    background-color: greenyellow;
+}
+.action-btn:active {
+    scale: 0.90;
+}
+.delete-button:hover {
+    scale: 1.20;
+    background-color: red;  
+}
+.fade-out {
+    transform: scale(0.95);
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+#editPlayerForm button {
+    border-radius: 10px;
+    width: 50px;
+    background-color: #FFC857;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.progress-bar {
+    width: 80%;
+    height: 20px;
+    background-color: grey;
+    border-radius: 5px;
+    margin: 0 auto;
+    position: relative;
+}
+.progress-fill {
+    height: 100%;
+    background-color: crimson;
+    border-radius: 5px;
+}
+.percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white; 
+}
