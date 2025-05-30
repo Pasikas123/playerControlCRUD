@@ -14,7 +14,7 @@ Warrior
 
 ### Executing program
 
-Just open link: https://pasikas123.github.io/playerControlCRUD/
+Just open link: https://ddailide.github.io/playerControlCRUD/
 
 ## Getting Started
 
@@ -26,4 +26,4 @@ Just open link: https://pasikas123.github.io/playerControlCRUD/
 
 ## Authors
 
-Pasikas123
+@ddailide
