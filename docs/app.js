@@ -464,7 +464,7 @@ addPlayerOption.addEventListener('click', function () {
   return displayCreatePlayer();
 });
 function displayCreatePlayer() {
-  content.innerHTML = "\n    <h2>Fill your desired player below:</h2>\n    <form id=\"addPlayerForm\" class=\"addForm\">\n        <label for=\"PlayerName\">Player name:</label> \n        <input type=\"text\" id=\"PlayerName\" required>\n\n        <label for=\"PlayerXp\">Player XP:</label> \n        <input type=\"number\" id=\"PlayerXp\" required>\n\n        <label for=\"PlayerType\">Player type:</label>\n\n        <select id=\"PlayerType\" required>\n            <option value=\"\">Choose player type</option>\n            ".concat(manager.typeList.map(function (type) {
+  content.innerHTML = "\n    <h2>Fill your desired player below:</h2>\n    <form id=\"addPlayerForm\" class=\"addForm\">\n        <label for=\"PlayerName\">Player name:</label> \n        <input type=\"text\" id=\"PlayerName\">\n\n        <label for=\"PlayerXp\">Player XP:</label> \n        <input type=\"number\" id=\"PlayerXp\">\n\n        <label for=\"PlayerType\">Player type:</label>\n\n        <select id=\"PlayerType\">\n            <option value=\"\">Choose player type</option>\n            ".concat(manager.typeList.map(function (type) {
     return "<option value=\"".concat(type.getTypeName(), "\">").concat(type.getTypeName(), "</option>");
   }).join(''), "\n        </select>\n\n        <button class=\"btn\" type=\"submit\">Save player</button>\n    </form>\n    ");
   var addPlayerForm = document.getElementById('addPlayerForm');
@@ -480,6 +480,10 @@ function displayCreatePlayer() {
     var newPlayer = new _Player_js__WEBPACK_IMPORTED_MODULE_0__["default"](playerName, playerLevel, playerXp, playerType);
     if (!playerName) {
       alert("Player name cannot be empty!");
+      return;
+    }
+    if (!playerXp) {
+      alert("Player XP cannot be empty!");
       return;
     }
     if (manager.playerList.find(function (name) {

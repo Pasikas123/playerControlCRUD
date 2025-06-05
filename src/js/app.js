@@ -41,14 +41,14 @@ function displayCreatePlayer() {
     <h2>Fill your desired player below:</h2>
     <form id="addPlayerForm" class="addForm">
         <label for="PlayerName">Player name:</label> 
-        <input type="text" id="PlayerName" required>
+        <input type="text" id="PlayerName">
 
         <label for="PlayerXp">Player XP:</label> 
-        <input type="number" id="PlayerXp" required>
+        <input type="number" id="PlayerXp">
 
         <label for="PlayerType">Player type:</label>
 
-        <select id="PlayerType" required>
+        <select id="PlayerType">
             <option value="">Choose player type</option>
             ${manager.typeList.map(type => `<option value="${type.getTypeName()}">${type.getTypeName()}</option>`).join('')}
         </select>
@@ -72,6 +72,11 @@ function displayCreatePlayer() {
 
         if (!playerName) {
             alert("Player name cannot be empty!");
+            return;
+        }
+
+        if (!playerXp) {
+            alert("Player XP cannot be empty!");
             return;
         }
 
