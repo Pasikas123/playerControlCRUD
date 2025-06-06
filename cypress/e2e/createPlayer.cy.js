@@ -30,6 +30,7 @@ describe('Main page testing', () => {
     });
 
     it('Select attribute shows new added type', () => {
+      cy.get('#addTypeOption').click();
       cy.createNewType();
       cy.get('#addPlayerOption').click();
       cy.get('#PlayerType').find('option').should('contain', 'Test');
@@ -51,6 +52,7 @@ describe('Main page testing', () => {
     });
 
     it('Creating with valid data (new type)', () => {
+      cy.get('#addTypeOption').click();
       cy.createNewType();
       cy.get('#addPlayerOption').click();
       cy.createPlayerWithNewTypeData();
@@ -122,6 +124,18 @@ describe('Main page testing', () => {
       cy.contains('button', 'Save player').click();
       cy.on('window:alert', (alertText) => {
         expect(alertText).to.equal('Player name cannot be empty!')
+      });
+    });
+
+    it('Creating with same data', () => {
+      cy.createPlayerWithValidData();
+      cy.get('tr').eq(4).find('td').eq(1).should('contain', 'Test');
+      cy.get('tr').eq(4).find('td').eq(2).should('contain', 'Archer');
+      cy.get('tr').eq(4).find('td').eq(4).should('contain', '3000');
+      cy.get('#addPlayerOption').click();
+      cy.createPlayerWithValidData();
+      cy.on('window:alert', (alertText) => {
+        expect(alertText).to.equal('Player name already exists!')
       });
     });
 

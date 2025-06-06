@@ -6,9 +6,9 @@ const archer = new Type('Archer');
 const mage = new Type('Mage');
 const warrior = new Type('Warrior');
 
-const zaidejas1 = new Player('Dolbis', 3, 2200, archer);
-const zaidejas2 = new Player('Rombas', 4, 3600, mage);
-const zaidejas3 = new Player('Zingas', 5, 4900, warrior);
+const zaidejas1 = new Player('Dolbis', 10, 9200, archer);
+const zaidejas2 = new Player('Rombas', 8, 7600, mage);
+const zaidejas3 = new Player('Zingas', 7, 6900, warrior);
 
 archer.addPlayer(zaidejas1);
 mage.addPlayer(zaidejas2);
@@ -81,7 +81,7 @@ function displayCreatePlayer() {
         }
 
         if (manager.playerList.find(name => name.getName() === playerName)) {
-            alert("Type name already exists!");
+            alert("Player name already exists!");
             return;
         }
 
@@ -105,7 +105,7 @@ function displayCreateType() {
     <h2>Fill your desired type below:</h2>
     <form id="addTypeForm" class="addForm">
         <label for="TypeName">Type name:</label> 
-        <input type="text" id="TypeName" required>
+        <input type="text" id="TypeName">
 
         <button class="btn" type="submit">Save type</button>
     </form>

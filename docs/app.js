@@ -440,9 +440,9 @@ __webpack_require__.r(__webpack_exports__);
 var archer = new _Type_js__WEBPACK_IMPORTED_MODULE_2__["default"]('Archer');
 var mage = new _Type_js__WEBPACK_IMPORTED_MODULE_2__["default"]('Mage');
 var warrior = new _Type_js__WEBPACK_IMPORTED_MODULE_2__["default"]('Warrior');
-var zaidejas1 = new _Player_js__WEBPACK_IMPORTED_MODULE_0__["default"]('Dolbis', 3, 2200, archer);
-var zaidejas2 = new _Player_js__WEBPACK_IMPORTED_MODULE_0__["default"]('Rombas', 4, 3600, mage);
-var zaidejas3 = new _Player_js__WEBPACK_IMPORTED_MODULE_0__["default"]('Zingas', 5, 4900, warrior);
+var zaidejas1 = new _Player_js__WEBPACK_IMPORTED_MODULE_0__["default"]('Dolbis', 10, 9200, archer);
+var zaidejas2 = new _Player_js__WEBPACK_IMPORTED_MODULE_0__["default"]('Rombas', 8, 7600, mage);
+var zaidejas3 = new _Player_js__WEBPACK_IMPORTED_MODULE_0__["default"]('Zingas', 7, 6900, warrior);
 archer.addPlayer(zaidejas1);
 mage.addPlayer(zaidejas2);
 warrior.addPlayer(zaidejas3);
@@ -489,7 +489,7 @@ function displayCreatePlayer() {
     if (manager.playerList.find(function (name) {
       return name.getName() === playerName;
     })) {
-      alert("Type name already exists!");
+      alert("Player name already exists!");
       return;
     }
     manager.addPlayer(newPlayer);
@@ -506,7 +506,7 @@ addTypeOption.addEventListener('click', function () {
   return displayCreateType();
 });
 function displayCreateType() {
-  content.innerHTML = "\n    <h2>Fill your desired type below:</h2>\n    <form id=\"addTypeForm\" class=\"addForm\">\n        <label for=\"TypeName\">Type name:</label> \n        <input type=\"text\" id=\"TypeName\" required>\n\n        <button class=\"btn\" type=\"submit\">Save type</button>\n    </form>\n    ";
+  content.innerHTML = "\n    <h2>Fill your desired type below:</h2>\n    <form id=\"addTypeForm\" class=\"addForm\">\n        <label for=\"TypeName\">Type name:</label> \n        <input type=\"text\" id=\"TypeName\">\n\n        <button class=\"btn\" type=\"submit\">Save type</button>\n    </form>\n    ";
   var addTypeForm = document.getElementById('addTypeForm');
   addTypeForm.addEventListener('submit', function (e) {
     e.preventDefault();
